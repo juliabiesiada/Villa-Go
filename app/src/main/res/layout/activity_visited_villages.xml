@@ -46,6 +46,7 @@
             android:layout_marginBottom="20dp">
 
             <ImageView
+                android:id="@+id/parisImageView"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="10dp"

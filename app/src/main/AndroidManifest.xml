@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Villago">
         <activity
+            android:name=".VillageActivity"
+            android:exported="true" />
+        <activity
             android:name=".VisitedVillagesActivity"
             android:exported="true" />
         <activity
