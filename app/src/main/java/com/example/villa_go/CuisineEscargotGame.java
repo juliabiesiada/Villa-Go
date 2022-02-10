@@ -1,0 +1,280 @@
+package com.example.villa_go;
+
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+public class CuisineEscargotGame extends AppCompatActivity implements View.OnClickListener{
+    //spots spelling Escargot
+    TextView E;
+    ImageView EUnder;
+    TextView S;
+    ImageView SUnder;
+    TextView C;
+    ImageView CUnder;
+    TextView A;
+    ImageView AUnder;
+    TextView RLetter;
+    ImageView RUnder;
+    TextView G;
+    ImageView GUnder;
+    TextView O;
+    ImageView OUnder;
+    TextView T;
+    ImageView TUnder;
+
+    //Cards with letters
+    CardView TCard;
+    CardView RCard;
+    CardView UCard;
+    CardView OCard;
+    CardView SCard;
+    CardView NCard;
+    CardView VCard;
+    CardView LCard;
+    CardView BCard;
+    CardView ICard;
+    CardView MCard;
+    CardView GCard;
+    CardView YCard;
+    CardView ECard;
+    CardView ACard;
+    CardView CCard;
+
+    //Lives
+    ImageView firstHeart;
+    ImageView secondHeart;
+    ImageView thirdHeart;
+
+    //Game values
+    int lives = 3;
+    String wordCompleted = "";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.cuisine_escargot_letter);
+        setupUI();
+    }
+
+    private void setupUI() {
+        E = findViewById(R.id.ELetter);
+        EUnder = findViewById(R.id.ELetterUnder);
+        S = findViewById(R.id.SLetter);
+        SUnder = findViewById(R.id.SLetterUnder);
+        C = findViewById(R.id.CLetter);
+        CUnder = findViewById(R.id.CLetterUnder);
+        A = findViewById(R.id.ALetter);
+        AUnder = findViewById(R.id.ALetterUnder);
+        RLetter = findViewById(R.id.RLetter);
+        RUnder = findViewById(R.id.RLetterUnder);
+        G = findViewById(R.id.GLetter);
+        GUnder = findViewById(R.id.GLetterUnder);
+        O = findViewById(R.id.OLetter);
+        OUnder = findViewById(R.id.OLetterUnder);
+        T = findViewById(R.id.TLetter);
+        TUnder = findViewById(R.id.TLetterUnder);
+
+        TCard = findViewById(R.id.T);
+        TCard.setOnClickListener(this);
+        RCard = findViewById(R.id.RCard);
+        RCard.setOnClickListener(this);
+        UCard = findViewById(R.id.U);
+        UCard.setOnClickListener(this);
+        OCard = findViewById(R.id.O);
+        OCard.setOnClickListener(this);
+        SCard = findViewById(R.id.S);
+        SCard.setOnClickListener(this);
+        NCard = findViewById(R.id.N);
+        NCard.setOnClickListener(this);
+        VCard = findViewById(R.id.V);
+        VCard.setOnClickListener(this);
+        LCard = findViewById(R.id.L);
+        LCard.setOnClickListener(this);
+        BCard = findViewById(R.id.B);
+        BCard.setOnClickListener(this);
+        ICard = findViewById(R.id.I);
+        ICard.setOnClickListener(this);
+        MCard = findViewById(R.id.M);
+        MCard.setOnClickListener(this);
+        GCard = findViewById(R.id.G);
+        GCard.setOnClickListener(this);
+        YCard = findViewById(R.id.Y);
+        YCard.setOnClickListener(this);
+        ECard = findViewById(R.id.E);
+        ECard.setOnClickListener(this);
+        ACard = findViewById(R.id.A);
+        ACard.setOnClickListener(this);
+        CCard = findViewById(R.id.C);
+        CCard.setOnClickListener(this);
+
+        firstHeart = findViewById(R.id.firstHeart);
+        secondHeart = findViewById(R.id.secondHeart);
+        thirdHeart = findViewById(R.id.thirdHeart);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.E:
+                if(checkGoodLetter("E")) {
+                    //actualise display
+                    E.setTextColor(Color.parseColor("#000000"));
+                    EUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    SUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    ECard.setVisibility(View.INVISIBLE);
+                    ECard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.S:
+                if(checkGoodLetter("S")) {
+                    //actualise display
+                    S.setTextColor(Color.parseColor("#000000"));
+                    SUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    CUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    SCard.setVisibility(View.INVISIBLE);
+                    SCard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.C:
+                if(checkGoodLetter("C")) {
+                    //actualise display
+                    C.setTextColor(Color.parseColor("#000000"));
+                    CUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    AUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    CCard.setVisibility(View.INVISIBLE);
+                    CCard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.A:
+                if(checkGoodLetter("A")) {
+                    //actualise display
+                    A.setTextColor(Color.parseColor("#000000"));
+                    AUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    RUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    ACard.setVisibility(View.INVISIBLE);
+                    ACard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.RCard:
+                if(checkGoodLetter("R")) {
+                    //actualise display
+                    RLetter.setTextColor(Color.parseColor("#000000"));
+                    RUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    GUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    RCard.setVisibility(View.INVISIBLE);
+                    RCard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.G:
+                if(checkGoodLetter("G")) {
+                    //actualise display
+                    G.setTextColor(Color.parseColor("#000000"));
+                    GUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    OUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    GCard.setVisibility(View.INVISIBLE);
+                    GCard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.O:
+                if(checkGoodLetter("O")) {
+                    //actualise display
+                    O.setTextColor(Color.parseColor("#000000"));
+                    OUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+                    OCard.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ababab")));
+                    OCard.setVisibility(View.INVISIBLE);
+                    OCard.setOnClickListener(null);
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.T:
+                if(checkGoodLetter("T")) {
+                    //actualise display
+                    T.setTextColor(Color.parseColor("#000000"));
+                    TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+                    TCard.setVisibility(View.INVISIBLE);
+                    TCard.setOnClickListener(null);
+                    intent = new Intent(this, VisitedVillagesActivity.class);
+                    startActivity(intent);
+                    break;
+                } else {
+                    actualiseLives();
+                }
+                break;
+            case R.id.U:
+            case R.id.N:
+            case R.id.V:
+            case R.id.L:
+            case R.id.B:
+            case R.id.I:
+            case R.id.M:
+            case R.id.Y:
+                actualiseLives();
+                break;
+        }
+    }
+
+    private void actualiseLives() {
+        lives--;
+        if (lives==2) {
+            firstHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        } else if(lives==1) {
+            secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        } else if(lives==0) {
+            thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        }
+    }
+
+    public boolean checkGoodLetter(String l) {
+        boolean b = false;
+        if(l=="E" && wordCompleted=="") {
+            b = true;
+            wordCompleted="e";
+        }else if(l=="S" && wordCompleted=="e") {
+            b = true;
+            wordCompleted="es";
+        }else if(l=="C" && wordCompleted=="es") {
+            b = true;
+            wordCompleted="esc";
+        }else if(l=="A" && wordCompleted=="esc") {
+            b = true;
+            wordCompleted="esca";
+        }else if(l=="R" && wordCompleted=="esca") {
+            b = true;
+            wordCompleted="escar";
+        }else if(l=="G" && wordCompleted=="escar") {
+            b = true;
+            wordCompleted="escarg";
+        }else if(l=="O" && wordCompleted=="escarg") {
+            b = true;
+            wordCompleted="escargo";
+        }else if(l=="T" && wordCompleted=="escargo") {
+            b = true;
+            wordCompleted="escargot";
+        }
+        return b;
+    }
+}

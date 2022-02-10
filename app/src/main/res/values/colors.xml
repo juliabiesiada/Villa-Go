@@ -6,6 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="grey">#ababab</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backgroundGreen">#65B891</color>
     <color name="secondaryGreen">#B5FFE1</color>

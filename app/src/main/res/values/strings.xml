@@ -3,4 +3,6 @@
     <string name="city_name_Paris">Paris</string>
     <string name="city_name_Lisbon">Lisbon</string>
     <string name="city_name_Madrid">Madrid</string>
+    <string name="escargot_question">Do you know the name of this famous parisian dish that is also named after the animal cooked in it?</string>
+    <string name="language_Paris">Language - Paris</string>
 </resources>

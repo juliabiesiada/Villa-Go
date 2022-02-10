@@ -13,6 +13,9 @@
             android:name=".VisitedVillagesActivity"
             android:exported="true" />
         <activity
+            android:name=".CuisineEscargotGame"
+            android:exported="true" />
+        <activity
             android:name=".EquipmentActivity"
             android:exported="true" />
         <activity
