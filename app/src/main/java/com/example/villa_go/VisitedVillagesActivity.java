@@ -2,36 +2,35 @@ package com.example.villa_go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 public class VisitedVillagesActivity extends AppCompatActivity implements View.OnClickListener{
 
-    LinearLayout visitedVillageParis;
+    ImageView parisImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visited_villages);
-
         setupUI();
     }
 
     private void setupUI() {
-        visitedVillageParis = findViewById(R.id.visitedCityParis);
-        visitedVillageParis.setOnClickListener(this);
+        parisImageView = findViewById(R.id.parisImageView);
+        parisImageView.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.visitedCityParis:
-                intent = new Intent(this, CuisineEscargotGame.class);
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.parisImageView:
+                Intent intent = new Intent(this, VillageActivity.class);
                 startActivity(intent);
-                break;
         }
     }
 }

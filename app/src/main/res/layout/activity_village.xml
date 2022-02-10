@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_village">
+
+    <include layout="@layout/top_bar"></include>
+
+    <ImageView
+        android:id="@+id/singerImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/singer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
+
+    <ImageView
+        android:id="@+id/chefImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/chef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/model"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/photographer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/teacher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/gardener"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/chef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/farmer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/athelete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ballerina"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rapper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/student"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/artist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_level"
+        android:src="@drawable/cuisine"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/language"
+        android:padding="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/bg_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB9"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB10"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <ImageButton
+        android:id="@+id/lvlCheckIB13"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_level"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
