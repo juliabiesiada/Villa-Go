@@ -123,7 +123,6 @@
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_empty"
                     android:backgroundTint="@color/primaryGreen" />
 
             </LinearLayout>
@@ -147,8 +146,7 @@
                     android:id="@+id/SLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 
@@ -171,8 +169,7 @@
                     android:id="@+id/CLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 
@@ -195,8 +192,7 @@
                     android:id="@+id/ALetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 
@@ -219,8 +215,7 @@
                     android:id="@+id/RLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 
@@ -243,8 +238,7 @@
                     android:id="@+id/GLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
@@ -267,8 +261,7 @@
                     android:id="@+id/OLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 
@@ -291,8 +284,7 @@
                     android:id="@+id/TLetterUnder"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_empty" />
+                    android:layout_gravity="center" />
 
             </LinearLayout>
         </LinearLayout>
