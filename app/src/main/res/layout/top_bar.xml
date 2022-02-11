@@ -14,7 +14,7 @@
         android:src="@drawable/ic_back"
         android:scaleType="fitCenter"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="230dp"
+        android:layout_marginStart="210dp"
         android:background="@drawable/bg_secondary_green"
         android:src="@drawable/backpack"
         android:scaleType="fitCenter"
