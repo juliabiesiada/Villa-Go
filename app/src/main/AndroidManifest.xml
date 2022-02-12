@@ -19,6 +19,9 @@
             android:name=".CuisineEscargotGame"
             android:exported="true" />
         <activity
+            android:name=".FindTheWordGame"
+            android:exported="true" />
+        <activity
             android:name=".EquipmentActivity"
             android:exported="true" />
         <activity
