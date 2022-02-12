@@ -63,6 +63,7 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB12.setOnClickListener(this);
         lvlCheckIB13.setOnClickListener(this);
 
+        levels[4] = FindTheWordGame.class;
     }
 
     @Override
@@ -71,8 +72,8 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         if (idString.contains("lvlCheckIB")) {
             int lvlNumber = Integer.parseInt(idString
                     .replace("com.example.villa_go:id/lvlCheckIB", ""));
-            //Intent intent = new Intent(this, levels[lvlNumber]);
-            //startActivity(intent);
+            Intent intent = new Intent(this, levels[lvlNumber]);
+            startActivity(intent);
             System.out.println(lvlNumber);
         }
     }

@@ -80,6 +80,17 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
         return myCharArray;
     }
 
+    private void actualiseLives() {
+        lives--;
+        if (lives==2) {
+            firstHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        } else if(lives==1) {
+            secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        } else if(lives==0) {
+            thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+        }
+    }
+
     @Override
     public void onClick(View view) {
         Intent intent;
@@ -88,7 +99,7 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
             if(bl.getText().length() != 0) {
                 int index = 0;
                 while(als[index].getText().length() != 0) index++;
-                als[index].setText(bl.getText());
+                als[index].setText(bl.getText().toString());
                 bl.setText("");
             }
         } else if(alsID.contains(view.getId())) {
@@ -96,10 +107,25 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
             if(bal.getText().length() != 0) {
                 int index = 0;
                 while(ls[index].getText().length() != 0) index++;
-                ls[index].setText(bal.getText());
+                ls[index].setText(bal.getText().toString());
                 bal.setText("");
                 if(index == word.length()-1) {
-                    // check word
+                    String wordCheck = "";
+                    for(int i=0; i < ls.length; i++) {
+                        wordCheck += ls[i].getText().toString();
+                    }
+                    if(wordCheck.equals(word)) {
+                        intent = new Intent(this, VillageActivity.class);
+                        startActivity(intent);
+                    } else {
+                        actualiseLives();
+                        for(int i=0; i < ls.length; i++) {
+                            int index2 = 0;
+                            while(als[index2].getText().length() != 0) index2++;
+                            als[index2].setText(ls[i].getText().toString());
+                            ls[i].setText("");
+                        }
+                    }
                 }
             }
         }
