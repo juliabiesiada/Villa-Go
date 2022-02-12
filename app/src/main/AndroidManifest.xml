@@ -22,6 +22,9 @@
             android:name=".FindTheWordGame"
             android:exported="true" />
         <activity
+            android:name=".GuessTheMonumentGame"
+            android:exported="true" />
+        <activity
             android:name=".EquipmentActivity"
             android:exported="true" />
         <activity

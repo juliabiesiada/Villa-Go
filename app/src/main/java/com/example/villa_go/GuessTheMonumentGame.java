@@ -11,10 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class FindTheWordGame extends AppCompatActivity implements View.OnClickListener {
+public class GuessTheMonumentGame extends AppCompatActivity implements View.OnClickListener {
     // Letters
-    Button l1, l2, l3, l4, l5, l6, l7, al1, al2, al3, al4, al5, al6, al7, al8, al9, al10, al11, al12, al13, al14, al15, al16;
-    Button[] ls = {l1, l2, l3, l4, l5, l6, l7};
+    Button l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, al1, al2, al3, al4, al5, al6, al7, al8, al9, al10, al11, al12, al13, al14, al15, al16;
+    Button[] ls = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10};
     Button[] als = {al1, al2, al3, al4, al5, al6, al7, al8, al9, al10, al11, al12, al13, al14, al15, al16};
     ArrayList<Integer> lsID = new ArrayList<>(), alsID = new ArrayList<>();
     // Top bar
@@ -26,12 +26,12 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
     ImageView thirdHeart;
     //Game values
     int lives = 3;
-    String word = "voyager";
+    String word = "toureiffel";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.find_the_word_activity);
+        setContentView(R.layout.guess_the_monument_activity);
         setupUI();
     }
 
@@ -137,7 +137,7 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
                     }
                 }
             }
-        }  else {
+        } else {
             switch(view.getId()) {
                 case R.id.backImageButton: {
                     intent = new Intent(this, VillageActivity.class);
@@ -153,3 +153,4 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
         }
     }
 }
+

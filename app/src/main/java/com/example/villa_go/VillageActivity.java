@@ -64,6 +64,7 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB13.setOnClickListener(this);
 
         levels[4] = FindTheWordGame.class;
+        levels[5] = GuessTheMonumentGame.class;
     }
 
     @Override
