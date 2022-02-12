@@ -76,7 +76,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/teachercolored" />
+                        android:background="@drawable/teacher" />
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
@@ -90,6 +90,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:text="@string/escargot_question" />
 
                     </androidx.cardview.widget.CardView>
