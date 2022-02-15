@@ -243,9 +243,68 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
             firstHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
         } else if(lives==1) {
             secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
-        } else if(lives==0) {
+        } else if(lives<=0) {
             thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+            reset();
         }
+    }
+
+    private void reset() {
+        //display reset
+        firstHeart.setBackground(getResources().getDrawable(R.drawable.full_heart));
+        secondHeart.setBackground(getResources().getDrawable(R.drawable.full_heart));
+        thirdHeart.setBackground(getResources().getDrawable(R.drawable.full_heart));
+        E.setTextColor(Color.parseColor("#65B891"));
+        S.setTextColor(Color.parseColor("#65B891"));
+        C.setTextColor(Color.parseColor("#65B891"));
+        A.setTextColor(Color.parseColor("#65B891"));
+        RLetter.setTextColor(Color.parseColor("#65B891"));
+        G.setTextColor(Color.parseColor("#65B891"));
+        O.setTextColor(Color.parseColor("#65B891"));
+        T.setTextColor(Color.parseColor("#65B891"));
+        EUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
+        SUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        CUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        AUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        RUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        GUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        OUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        ECard.setVisibility(View.VISIBLE);
+        ECard.setOnClickListener(this);
+        SCard.setVisibility(View.VISIBLE);
+        SCard.setOnClickListener(this);
+        CCard.setVisibility(View.VISIBLE);
+        CCard.setOnClickListener(this);
+        ACard.setVisibility(View.VISIBLE);
+        ACard.setOnClickListener(this);
+        RCard.setVisibility(View.VISIBLE);
+        RCard.setOnClickListener(this);
+        GCard.setVisibility(View.VISIBLE);
+        GCard.setOnClickListener(this);
+        OCard.setVisibility(View.VISIBLE);
+        OCard.setOnClickListener(this);
+        TCard.setVisibility(View.VISIBLE);
+        TCard.setOnClickListener(this);
+        UCard.setVisibility(View.VISIBLE);
+        UCard.setOnClickListener(this);
+        NCard.setVisibility(View.VISIBLE);
+        NCard.setOnClickListener(this);
+        VCard.setVisibility(View.VISIBLE);
+        VCard.setOnClickListener(this);
+        LCard.setVisibility(View.VISIBLE);
+        LCard.setOnClickListener(this);
+        BCard.setVisibility(View.VISIBLE);
+        BCard.setOnClickListener(this);
+        ICard.setVisibility(View.VISIBLE);
+        ICard.setOnClickListener(this);
+        MCard.setVisibility(View.VISIBLE);
+        MCard.setOnClickListener(this);
+        YCard.setVisibility(View.VISIBLE);
+        YCard.setOnClickListener(this);
+        //gameplay values reset
+        wordCompleted = "";
+        lives = 3;
     }
 
     public boolean checkGoodLetter(String l) {
