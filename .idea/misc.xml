@@ -11,6 +11,7 @@
         <entry key="..\:/GitHub/Villa-Go/app/src/main/res/layout/guess_the_monument_activity.xml" value="0.18802083333333333" />
         <entry key="..\:/GitHub/Villa-Go/app/src/main/res/layout/match_images_and_words_activity.xml" value="0.33" />
         <entry key="..\:/GitHub/Villa-Go/app/src/main/res/layout/top_bar.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable-v24/bg_secondary_green2.xml" value="0.1465" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/bg_cuisine.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/bg_level.xml" value="0.19166666666666668" />
@@ -18,11 +19,15 @@
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/bg_purple.xml" value="0.111" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/bg_secondary_green.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/bg_top_bar.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/flip_animation.xml" value="0.1465" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/flip_in.xml" value="0.1465" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/flip_out.xml" value="0.1465" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/ic_backpack_background.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/drawable/speech_bubble.xml" value="0.1465" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_dialog_on_win.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_equipment.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_holidays.xml" value="0.1" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_select_items.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/activity_village.xml" value="0.22" />
@@ -30,6 +35,7 @@
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/eq_paris_fragment.xml" value="0.1" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/expandable_list_header.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/expandable_list_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/fragment_holidays1.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/home_screen.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/top_bar.xml" value="0.22" />
         <entry key="..\:/Users/jbies/AndroidStudioProjects/VillaGo/app/src/main/res/layout/visitedvillages_screen.xml" value="0.17552083333333332" />
