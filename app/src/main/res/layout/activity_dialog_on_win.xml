@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    tools:context=".DialogOnWin"
+    android:orientation="vertical"
+    android:background="@drawable/bg_primary_green">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Congratulations!"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="You completed this mission. New information has been added to the inventory."
+        android:textColor="@android:color/black"
+        android:textSize="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnInventory"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_purple"
+            android:clickable="true"
+            android:text="Inventory"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnVillage"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_purple"
+            android:clickable="true"
+            android:text="Village"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

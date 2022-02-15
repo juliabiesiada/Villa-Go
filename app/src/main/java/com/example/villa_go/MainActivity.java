@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.inventoryCardView:
                 intent = new Intent(this, EquipmentActivity.class);
+                intent.putExtra("caller", 1);
                 startActivity(intent);
                 break;
             case R.id.continueButton:

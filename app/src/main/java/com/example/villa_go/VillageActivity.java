@@ -2,6 +2,7 @@ package com.example.villa_go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,10 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
     ImageButton lvlCheckIB12;
     ImageButton lvlCheckIB13;
 
-    Class[] levels = new Class[13];
+    ImageButton backBtn;
+    ImageButton inventoryBtn;
+
+    Class[] levels = new Class[12];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,10 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         setupUI();
 
         //TODO: Setup levels array
+        levels[1] = SelectItemsPicnicActivity.class;
+        levels[3] = FindTheWordGame.class;
+        levels[4] = GuessTheMonumentGame.class;
+        levels[11] = MatchImagesAndWordsGame.class;
     }
 
     private void setupUI() {
@@ -49,6 +57,9 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB12 = findViewById(R.id.lvlCheckIB12);
         lvlCheckIB13 = findViewById(R.id.lvlCheckIB13);
 
+        backBtn = findViewById(R.id.backImageButton);
+        inventoryBtn = findViewById(R.id.inventoryImageButton);
+
         lvlCheckIB1.setOnClickListener(this);
         lvlCheckIB2.setOnClickListener(this);
         lvlCheckIB3.setOnClickListener(this);
@@ -63,20 +74,34 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB12.setOnClickListener(this);
         lvlCheckIB13.setOnClickListener(this);
 
-        levels[3] = FindTheWordGame.class;
-        levels[4] = GuessTheMonumentGame.class;
-        levels[11] = MatchImagesAndWordsGame.class;
+        backBtn.setOnClickListener(this);
+        inventoryBtn.setOnClickListener(this);
+
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        String idString = view.getResources().getResourceName(view.getId());
-        if (idString.contains("lvlCheckIB")) {
-            int lvlNumber = Integer.parseInt(idString
-                    .replace("com.example.villa_go:id/lvlCheckIB", ""));
-            Intent intent = new Intent(this, levels[lvlNumber-1]);
-            startActivity(intent);
-            System.out.println(lvlNumber);
+        switch(view.getId()) {
+            case R.id.backImageButton:
+                Intent intent_b = new Intent(this, VisitedVillagesActivity.class);
+                startActivity(intent_b);
+                break;
+            case R.id.inventoryImageButton:
+                Intent intent_i = new Intent(this, EquipmentActivity.class);
+                intent_i.putExtra("caller", 3);
+                startActivity(intent_i);
+                break;
+            default:
+                String idString = view.getResources().getResourceName(view.getId());
+                if (idString.contains("lvlCheckIB")) {
+                    int lvlNumber = Integer.parseInt(idString
+                            .replace("com.example.villa_go:id/lvlCheckIB", ""));
+                    Intent intent = new Intent(this, levels[lvlNumber-1]);
+                    startActivity(intent);
+                }
+                break;
         }
+
     }
 }

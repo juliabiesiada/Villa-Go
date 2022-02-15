@@ -1,5 +1,6 @@
 package com.example.villa_go;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -100,6 +101,7 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         Intent intent;
@@ -146,6 +148,7 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
                 }
                 case R.id.inventoryImageButton: {
                     intent = new Intent(this, EquipmentActivity.class);
+                    intent.putExtra("caller", 6);
                     startActivity(intent);
                     break;
                 }
