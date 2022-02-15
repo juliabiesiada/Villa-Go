@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGreen">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/teacherImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                app:srcCompat="@drawable/teacher" />
+
+            <LinearLayout
+                android:layout_width="207dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/dialog_bubble"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/questionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center"
+                    android:text="Match the objects with their correct French translation"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="345dp"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="75dp"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/image1"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:src="@drawable/bottle"/>
+
+                <ImageButton
+                    android:id="@+id/image2"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:src="@drawable/bag"/>
+
+                <ImageButton
+                    android:id="@+id/image3"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:src="@drawable/book"/>
+
+                <ImageButton
+                    android:id="@+id/image4"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:src="@drawable/coffee"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/word3"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:text="livre"
+                    android:textColor="#000000"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/word1"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:text="bouteille"
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/word4"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:text="café"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/word2"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/ansLetterGray"
+                    android:text="sac"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/firstHeart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/full_heart" />
+
+            <ImageView
+                android:id="@+id/secondHeart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/full_heart" />
+
+            <ImageView
+                android:id="@+id/thirdHeart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/full_heart" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

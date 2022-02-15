@@ -23,7 +23,7 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
     ImageButton lvlCheckIB12;
     ImageButton lvlCheckIB13;
 
-    Class[] levels = new Class[12];
+    Class[] levels = new Class[13];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +63,9 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB12.setOnClickListener(this);
         lvlCheckIB13.setOnClickListener(this);
 
+        levels[3] = FindTheWordGame.class;
+        levels[4] = GuessTheMonumentGame.class;
+        levels[11] = MatchImagesAndWordsGame.class;
     }
 
     @Override
@@ -71,8 +74,8 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         if (idString.contains("lvlCheckIB")) {
             int lvlNumber = Integer.parseInt(idString
                     .replace("com.example.villa_go:id/lvlCheckIB", ""));
-            //Intent intent = new Intent(this, levels[lvlNumber]);
-            //startActivity(intent);
+            Intent intent = new Intent(this, levels[lvlNumber-1]);
+            startActivity(intent);
             System.out.println(lvlNumber);
         }
     }
