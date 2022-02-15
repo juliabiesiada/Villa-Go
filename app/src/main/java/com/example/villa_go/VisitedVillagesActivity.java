@@ -13,8 +13,8 @@ import android.widget.LinearLayout;
 public class VisitedVillagesActivity extends AppCompatActivity implements View.OnClickListener{
 
     LinearLayout parisLinearLayout;
-    ImageView parisImageView;
-    ImageButton backButton;
+    ImageButton backBtn;
+    ImageButton inventoryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +24,13 @@ public class VisitedVillagesActivity extends AppCompatActivity implements View.O
     }
 
     private void setupUI() {
-        //parisImageView = findViewById(R.id.parisImageView);
-        //parisImageView.setOnClickListener(this);
         parisLinearLayout = findViewById(R.id.visitedCityParis);
         parisLinearLayout.setOnClickListener(this);
-        backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(this);
+
+        backBtn = findViewById(R.id.backImageButton);
+        inventoryBtn = findViewById(R.id.inventoryImageButton);
+        backBtn.setOnClickListener(this);
+        inventoryBtn.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -41,13 +42,15 @@ public class VisitedVillagesActivity extends AppCompatActivity implements View.O
                 intent = new Intent(this, VillageActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.backButton:
-                intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+            case R.id.backImageButton:
+                Intent intent_b = new Intent(this, VisitedVillagesActivity.class);
+                startActivity(intent_b);
                 break;
-            /*case R.id.parisImageView:
-                Intent intent = new Intent(this, VillageActivity.class);
-                startActivity(intent);*/
+            case R.id.inventoryImageButton:
+                Intent intent_i = new Intent(this, EquipmentActivity.class);
+                intent_i.putExtra("caller", 2);
+                startActivity(intent_i);
+                break;
         }
     }
 }

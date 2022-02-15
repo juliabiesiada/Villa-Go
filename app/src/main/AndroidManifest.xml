@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Villago">
         <activity
+            android:name=".DialogOnWin"
+            android:exported="false" />
+        <activity
+            android:name=".SelectItemsPicnicActivity"
+            android:exported="true" />
+        <activity
             android:name=".VillageActivity"
             android:exported="true" />
         <activity

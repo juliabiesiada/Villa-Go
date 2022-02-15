@@ -2,9 +2,15 @@ package com.example.villa_go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.villa_go.helpers.ActivityCodes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,10 +27,20 @@ public class EquipmentActivity extends AppCompatActivity {
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
 
+    ImageButton backButton;
+    ImageButton equipmentButton;
+
+    int callerCode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupUI();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            callerCode = extras.getInt("caller");
+        }
     }
 
     private void setupUI() {
@@ -47,6 +63,21 @@ public class EquipmentActivity extends AppCompatActivity {
         setupExpandableGroupListeners(expandableListViewLanguage);
         setupExpandableGroupListeners(expandableListViewCulture);
         setupExpandableGroupListeners(expandableListViewCuisine);
+
+        backButton = findViewById(R.id.backImageButton);
+        equipmentButton = findViewById(R.id.inventoryImageButton);
+        //hide because we're already in activity
+        equipmentButton.setVisibility(View.GONE);
+
+        //add listener and check what was the calling activity
+        backButton.setOnClickListener((View v) -> {
+            if (callerCode > 0) {
+                ActivityCodes ac = new ActivityCodes();
+                Class a = ac.getCaller(callerCode);
+                Intent intent = new Intent(this, a);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setupExpandableGroupListeners(ExpandableListView lv) {

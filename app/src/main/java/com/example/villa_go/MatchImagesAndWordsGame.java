@@ -1,5 +1,6 @@
 package com.example.villa_go;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -74,6 +75,7 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         Intent intent;
@@ -107,6 +109,7 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
                 }
                 case R.id.inventoryImageButton: {
                     intent = new Intent(this, EquipmentActivity.class);
+                    intent.putExtra("caller", 5);
                     startActivity(intent);
                     break;
                 }

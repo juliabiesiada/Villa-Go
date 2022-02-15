@@ -5,4 +5,5 @@
     <string name="city_name_Madrid">Madrid</string>
     <string name="escargot_question">Do you know the name of this famous parisian dish that is also named after the animal cooked in it?</string>
     <string name="language_Paris">Language - Paris</string>
+    <string name="picnic_instruction">Select all the items you would need on a pic-nique and place them in the basket!</string>
 </resources>
