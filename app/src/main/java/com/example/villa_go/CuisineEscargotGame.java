@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,23 +14,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class CuisineEscargotGame extends AppCompatActivity implements View.OnClickListener {
+
+    ImageButton backBtn;
+    ImageButton inventoryBtn;
+
     //spots spelling Escargot
     TextView E;
-    ImageView EUnder;
+    CardView EUnder;
     TextView S;
-    ImageView SUnder;
+    CardView SUnder;
     TextView C;
-    ImageView CUnder;
+    CardView CUnder;
     TextView A;
-    ImageView AUnder;
+    CardView AUnder;
     TextView RLetter;
-    ImageView RUnder;
+    CardView RUnder;
     TextView G;
-    ImageView GUnder;
+    CardView GUnder;
     TextView O;
-    ImageView OUnder;
+    CardView OUnder;
     TextView T;
-    ImageView TUnder;
+    CardView TUnder;
 
     //Cards with letters
     CardView TCard;
@@ -119,6 +125,11 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
         firstHeart = findViewById(R.id.firstHeart);
         secondHeart = findViewById(R.id.secondHeart);
         thirdHeart = findViewById(R.id.thirdHeart);
+
+        backBtn = findViewById(R.id.backImageButton);
+        backBtn.setOnClickListener(this);
+        inventoryBtn = findViewById(R.id.inventoryImageButton);
+        inventoryBtn.setOnClickListener(this);
     }
 
     @Override
@@ -217,8 +228,15 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
                     TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
                     TCard.setVisibility(View.INVISIBLE);
                     TCard.setOnClickListener(null);
-                    intent = new Intent(this, VisitedVillagesActivity.class);
-                    startActivity(intent);
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(getApplicationContext(), VillageActivity.class);
+                            startActivity(intent);
+                            supportFinishAfterTransition();
+                        }
+                    }, 500);
                     break;
                 } else {
                     actualiseLives();
@@ -233,6 +251,16 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
             case R.id.M:
             case R.id.Y:
                 actualiseLives();
+                break;
+            case R.id.backImageButton:
+                Intent intent_b = new Intent(this, VillageActivity.class);
+                startActivity(intent_b);
+                supportFinishAfterTransition();
+                break;
+            case R.id.inventoryImageButton:
+                Intent intent_i = new Intent(this, EquipmentActivity.class);
+                intent_i.putExtra("caller", 10);
+                startActivity(intent_i);
                 break;
         }
     }
@@ -263,13 +291,13 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
         O.setTextColor(Color.parseColor("#65B891"));
         T.setTextColor(Color.parseColor("#65B891"));
         EUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#93E5AB")));
-        SUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        CUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        AUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        RUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        GUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        OUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-        TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
+        SUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        CUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        AUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        RUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        GUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        OUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
+        TUnder.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#616161")));
         ECard.setVisibility(View.VISIBLE);
         ECard.setOnClickListener(this);
         SCard.setVisibility(View.VISIBLE);

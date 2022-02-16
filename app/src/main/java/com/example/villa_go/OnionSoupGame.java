@@ -316,10 +316,11 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
             case R.id.backImageButton:
                 Intent intent_b = new Intent(this, VillageActivity.class);
                 startActivity(intent_b);
+                supportFinishAfterTransition();
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 6);
+                intent_i.putExtra("caller", 9);
                 startActivity(intent_i);
                 break;
         }

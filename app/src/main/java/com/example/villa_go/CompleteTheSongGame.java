@@ -3,6 +3,7 @@ package com.example.villa_go;
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.DragEvent;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class CompleteTheSongGame extends AppCompatActivity implements View.OnClickListener{
+    MediaPlayer mediaPlayer;
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
@@ -52,6 +54,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
 
     private void setupUI() {
         playButton = findViewById(R.id.playButton);
+        playButton.setOnClickListener(this);
         playIcon = findViewById(R.id.playIcon);
         drop1 = findViewById(R.id.drop1);
         text1 = findViewById(R.id.text1);
@@ -86,6 +89,16 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
         backBtn.setOnClickListener(this);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
         inventoryBtn.setOnClickListener(this);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.lamarseillaise);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                playIcon.setBackground(getResources().getDrawable(R.drawable.ic_play));
+            }
+
+        });
     }
 
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
@@ -303,7 +316,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 5);
+                intent_i.putExtra("caller", 11);
                 startActivity(intent_i);
                 break;
             case R.id.confirmButton:
@@ -334,12 +347,36 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
                 startActivity(intent_r);
                 supportFinishAfterTransition();
                 break;
+            case R.id.playButton:
+                if(mediaPlayer.isPlaying()) {
+                    pauseMusic();
+                } else {
+                    playMusic();
+                }
+                break;
         }
 
     }
 
+    private void playMusic() {
+        playIcon.setBackground(getResources().getDrawable(R.drawable.ic_pause));
+        mediaPlayer.start();
+    }
+
+    private void pauseMusic() {
+        playIcon.setBackground(getResources().getDrawable(R.drawable.ic_play));
+        mediaPlayer.pause();
+    }
+
     private boolean checkAnswers() {
         return selectOption1 == "la patrie" && selectOption2 == "de gloire";
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
+        mediaPlayer.release();
     }
 }
 

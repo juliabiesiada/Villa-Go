@@ -84,7 +84,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
 
                     <TextView
@@ -92,42 +92,42 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
                     <TextView
                         android:id="@+id/ingredient3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
                     <TextView
                         android:id="@+id/ingredient4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
                     <TextView
                         android:id="@+id/ingredient5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
                     <TextView
                         android:id="@+id/ingredient6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
                     <TextView
                         android:id="@+id/ingredient7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-"
-                        android:textColor="@color/black"
+                        android:textColor="@color/darkGrey"
                         android:textSize="12dp"/>
 
                 </LinearLayout>

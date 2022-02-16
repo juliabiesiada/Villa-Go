@@ -3,29 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_back.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_chat.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_dialects.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_empty.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_inventory.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_map.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_mayor.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_parameters.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_population.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_village.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable/bg_level.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable/bg_top_bar.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable/greenpepper.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_equipment.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_visited_villages.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/cuisine_escargot_letter.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/expandable_list_header.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/expandable_list_item.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/home_screen.xml" value="0.22" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/onion_soup_game.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/top_bar.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/visitedvillages_screen.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_pause.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/drawable-anydpi/ic_play.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_dialog_on_win.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_equipment.xml" value="0.1408514492753623" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_select_items_picnic.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/complete_the_song_game.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/cuisine_escargot_letter.xml" value="0.22" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/find_the_word_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/match_images_and_words_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/onion_soup_game.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/top_bar.xml" value="0.1408514492753623" />
       </map>
     </option>
   </component>
