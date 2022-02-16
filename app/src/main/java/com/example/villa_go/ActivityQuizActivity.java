@@ -43,8 +43,6 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
     List<String> answersAL;
     int correctAnswerIndex;
 
-    //Handler timer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +51,6 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
         initializeUI();
         initializeQuestions();
         setupQuestion();
-
-        //timer = new Handler();
-        //timer.postDelayed(runTimer, 1000);
     }
 
     private void initializeUI() {
@@ -167,7 +162,7 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 11);
+                intent_i.putExtra("caller", 14);
                 startActivity(intent_i);
                 break;
             default:
