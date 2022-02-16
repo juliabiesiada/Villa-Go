@@ -320,7 +320,7 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 9);
+                intent_i.putExtra("caller", 12);
                 startActivity(intent_i);
                 break;
         }

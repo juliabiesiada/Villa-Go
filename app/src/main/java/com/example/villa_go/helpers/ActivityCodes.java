@@ -1,5 +1,6 @@
 package com.example.villa_go.helpers;
 
+import com.example.villa_go.CompleteTheSongGame;
 import com.example.villa_go.CuisineEscargotGame;
 import com.example.villa_go.EquipmentActivity;
 import com.example.villa_go.FindTheWordGame;
@@ -7,6 +8,7 @@ import com.example.villa_go.GuessTheMonumentGame;
 import com.example.villa_go.HolidaysActivity;
 import com.example.villa_go.MainActivity;
 import com.example.villa_go.MatchImagesAndWordsGame;
+import com.example.villa_go.OnionSoupGame;
 import com.example.villa_go.SelectItemsPicnicActivity;
 import com.example.villa_go.VillageActivity;
 import com.example.villa_go.VisitedVillagesActivity;
@@ -32,6 +34,9 @@ public class ActivityCodes {
         codesMap.put(8, EquipmentActivity.class);
         codesMap.put(9, CuisineEscargotGame.class);
         codesMap.put(10, HolidaysActivity.class);
+        codesMap.put(11, CuisineEscargotGame.class);
+        codesMap.put(12, OnionSoupGame.class);
+        codesMap.put(13, CompleteTheSongGame.class);
     }
 
     public Class getCaller(int i) {

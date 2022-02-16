@@ -259,7 +259,7 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 10);
+                intent_i.putExtra("caller", 11);
                 startActivity(intent_i);
                 break;
         }

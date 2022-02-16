@@ -316,7 +316,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.inventoryImageButton:
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
-                intent_i.putExtra("caller", 11);
+                intent_i.putExtra("caller", 13);
                 startActivity(intent_i);
                 break;
             case R.id.confirmButton:
