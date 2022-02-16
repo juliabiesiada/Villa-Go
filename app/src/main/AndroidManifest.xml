@@ -25,6 +25,12 @@
             android:name=".CuisineEscargotGame"
             android:exported="true" />
         <activity
+            android:name=".OnionSoupGame"
+            android:exported="true" />
+        <activity
+            android:name=".CompleteTheSongGame"
+            android:exported="true" />
+        <activity
             android:name=".FindTheWordGame"
             android:exported="true" />
         <activity

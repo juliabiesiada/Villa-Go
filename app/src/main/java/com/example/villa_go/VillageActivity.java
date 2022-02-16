@@ -37,8 +37,10 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
 
         //TODO: Setup levels array
         levels[1] = SelectItemsPicnicActivity.class;
+        levels[2] = OnionSoupGame.class;
         levels[3] = FindTheWordGame.class;
         levels[4] = GuessTheMonumentGame.class;
+        levels[5] = CompleteTheSongGame.class;
         levels[11] = MatchImagesAndWordsGame.class;
     }
 

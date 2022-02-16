@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class CuisineEscargotGame extends AppCompatActivity implements View.OnClickListener{
+public class CuisineEscargotGame extends AppCompatActivity implements View.OnClickListener {
     //spots spelling Escargot
     TextView E;
     ImageView EUnder;
