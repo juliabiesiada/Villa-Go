@@ -4,6 +4,7 @@ import com.example.villa_go.CuisineEscargotGame;
 import com.example.villa_go.EquipmentActivity;
 import com.example.villa_go.FindTheWordGame;
 import com.example.villa_go.GuessTheMonumentGame;
+import com.example.villa_go.HolidaysActivity;
 import com.example.villa_go.MainActivity;
 import com.example.villa_go.MatchImagesAndWordsGame;
 import com.example.villa_go.SelectItemsPicnicActivity;
@@ -30,6 +31,7 @@ public class ActivityCodes {
         codesMap.put(7, FindTheWordGame.class);
         codesMap.put(8, EquipmentActivity.class);
         codesMap.put(9, CuisineEscargotGame.class);
+        codesMap.put(10, HolidaysActivity.class);
     }
 
     public Class getCaller(int i) {

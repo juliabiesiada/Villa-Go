@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Villago">
         <activity
+            android:name=".HolidaysActivity"
+            android:exported="false" />
+        <activity
             android:name=".DialogOnWin"
             android:exported="false" />
         <activity

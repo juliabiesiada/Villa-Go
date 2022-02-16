@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectItemsPicnicActivity"
+    android:orientation="vertical"
+    android:background="@color/backgroundGreen">
+
+    <include layout="@layout/top_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ballerina"/>
+        <FrameLayout
+            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_marginTop="70dp">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:background="@drawable/speech_bubble"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:text="@string/holidays_instruction"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/card00"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_purple"
+                android:paddingEnd="10dp"
+                android:tag="15/08"
+                android:text=""
+                android:textSize="10sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Ascens-ion"
+                android:id="@+id/card01"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Labour Day"
+                android:id="@+id/card02"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="01/05"
+                android:id="@+id/card03"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="25/12 26/12"
+                android:paddingEnd="10dp"
+                android:id="@+id/card10"
+                android:textSize="10sp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="11/11"
+                android:id="@+id/card11"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Victory Day"
+                android:id="@+id/card12"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="May / June"
+                android:id="@+id/card13"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="All Saints' Day"
+                android:paddingEnd="10dp"
+                android:id="@+id/card20"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:textSize="10sp"
+                android:text=""
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="March / April"
+                android:id="@+id/card21"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Armist-ice Day"
+                android:id="@+id/card22"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="01/01"
+                android:id="@+id/card23"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="New Year's Day"
+                android:paddingEnd="10dp"
+                android:id="@+id/card30"
+                android:layout_width="80dp"
+                android:textSize="10sp"
+                android:layout_height="80dp"
+                android:text=""
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Easter"
+                android:id="@+id/card31"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="08/05"
+                android:id="@+id/card32"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="14/07"
+                android:id="@+id/card33"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Christ-mas"
+                android:paddingEnd="10dp"
+                android:id="@+id/card40"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:textSize="10sp"
+                android:text=""
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Bastille Day"
+                android:id="@+id/card41"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="Assum-ption"
+                android:id="@+id/card42"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginEnd="10dp"
+                android:tag="01/11"
+                android:id="@+id/card43"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@drawable/bg_purple"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
