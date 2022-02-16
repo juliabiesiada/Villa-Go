@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectItemsPicnicActivity"
+    android:orientation="vertical"
+    android:background="@color/backgroundGreen">
+
+    <include layout="@layout/top_bar"/>
+
+    <include
+        layout="@layout/life_bar"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textView_timer"
+        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:text="25"
+        android:textSize="70sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:text=""
+        android:backgroundTint="@color/orange"
+        android:textSize="22sp"
+        android:background="@drawable/bg_purple"
+        android:id="@+id/textView_question"
+        android:layout_width="350dp"
+        android:layout_height="180dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:gravity="end"
+        android:padding="10dp"
+        android:tag="0"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end"
+        android:textSize="20sp"
+        android:backgroundTint="@color/primaryGreen"
+        android:background="@drawable/bg_secondary_green2"
+        android:id="@+id/button_answer1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:padding="10dp"
+        android:tag="1"
+        android:gravity="end"
+        android:backgroundTint="@color/primaryGreen"
+        android:background="@drawable/bg_secondary_green2"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:textSize="20sp"
+        android:id="@+id/button_answer2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:paddingTop="20dp"
+        android:padding="10dp"
+        android:gravity="end"
+        android:tag="2"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/primaryGreen"
+        android:background="@drawable/bg_secondary_green2"
+        android:layout_gravity="end"
+        android:textSize="20sp"
+        android:id="@+id/button_answer3"/>
+
+
+
+</LinearLayout>

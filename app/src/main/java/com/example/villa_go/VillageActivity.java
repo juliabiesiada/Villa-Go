@@ -40,6 +40,7 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         levels[2] = HolidaysActivity.class;
         levels[3] = FindTheWordGame.class;
         levels[4] = GuessTheMonumentGame.class;
+        levels[6] = ActivityQuizActivity.class;
         levels[11] = MatchImagesAndWordsGame.class;
     }
 
@@ -98,8 +99,10 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
                 if (idString.contains("lvlCheckIB")) {
                     int lvlNumber = Integer.parseInt(idString
                             .replace("com.example.villa_go:id/lvlCheckIB", ""));
-                    Intent intent = new Intent(this, levels[lvlNumber-1]);
-                    startActivity(intent);
+                    if (levels[lvlNumber-1] != null) {
+                        Intent intent = new Intent(this, levels[lvlNumber-1]);
+                        startActivity(intent);
+                    }
                 }
                 break;
         }
