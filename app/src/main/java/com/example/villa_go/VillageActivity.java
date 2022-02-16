@@ -41,6 +41,7 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         levels[3] = FindTheWordGame.class;
         levels[4] = GuessTheMonumentGame.class;
         levels[5] = CompleteTheSongGame.class;
+        levels[6] = CuisineEscargotGame.class;
         levels[11] = MatchImagesAndWordsGame.class;
     }
 
