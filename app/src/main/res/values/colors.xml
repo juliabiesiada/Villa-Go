@@ -12,6 +12,8 @@
     <color name="backgroundGreen">#65B891</color>
     <color name="secondaryGreen">#B5FFE1</color>
     <color name="primaryGreen">#93E5AB</color>
+    <color name="darkGreen">#4d9171</color>
+    <color name="progress">#00cf6d</color>
     <color name="highlightPurple">#49416D</color>
     <color name="ansLetterGray">#D7DAEA</color>
     <color name="selected">#7C7C8E</color>

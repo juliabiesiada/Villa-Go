@@ -22,20 +22,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/teacherImage"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="50dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 app:srcCompat="@drawable/teacher" />
 
             <LinearLayout
-                android:layout_width="207dp"
-                android:layout_height="50dp"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/dialog_bubble"
                 android:orientation="vertical">
@@ -45,6 +45,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|center"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
                     android:text="What's French for &quot;to travel&quot;?"
                     android:textColor="#000000" />
             </LinearLayout>

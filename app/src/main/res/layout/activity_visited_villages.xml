@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:background="#65B891">
 
+    <include layout="@layout/top_bar"/>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
-
-
-        <include layout="@layout/top_bar"/>
 
         <TextView
             android:layout_marginStart="10dp"
@@ -20,11 +20,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="Visited villages :"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:textColor="@color/black"/>
 
         <LinearLayout
-            android:layout_marginStart="10dp"
             android:id="@+id/visitedCityParis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,22 +33,25 @@
 
             <ImageView
                 android:id="@+id/parisImageView"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_village" />
+                android:background="@drawable/paris" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Paris"
+                    android:textColor="@color/darkGrey"
                     android:textSize="30dp" />
 
                 <LinearLayout
@@ -64,7 +66,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:progress="25" />
+                        android:progress="25"
+                        android:progressBackgroundTint="@color/darkGreen"
+                        android:progressTint="@color/secondaryGreen"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -72,6 +76,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:text="25%"
+                        android:textColor="@color/darkGrey"
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -82,7 +87,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#B5FFE1"
             app:cardCornerRadius="2dp">
 
@@ -99,7 +104,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/ic_map" />
+                    android:background="@drawable/maps" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
