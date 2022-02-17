@@ -9,14 +9,14 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-public class DialogOnWin extends Dialog implements View.OnClickListener {
+public class DialogOnLoose extends Dialog implements View.OnClickListener {
 
     public Activity activity;
 
-    private Button inventoryButton;
+    private Button replayButton;
     private Button villageButton;
 
-    public DialogOnWin(Activity a) {
+    public DialogOnLoose(Activity a) {
         super(a);
         this.activity = a;
     }
@@ -25,15 +25,15 @@ public class DialogOnWin extends Dialog implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dialog_on_win);
+        setContentView(R.layout.dialog_on_loose);
         setupUI();
     }
 
     private void setupUI() {
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        inventoryButton = findViewById(R.id.btnInventory);
+        replayButton = findViewById(R.id.btnInventory);
         villageButton = findViewById(R.id.btnVillage);
-        inventoryButton.setOnClickListener(this);
+        replayButton.setOnClickListener(this);
         villageButton.setOnClickListener(this);
     }
 
@@ -41,7 +41,7 @@ public class DialogOnWin extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnInventory:
+            case R.id.btnReplay:
                 Intent i_intent = new Intent(activity.getApplicationContext(), EquipmentActivity.class);
                 i_intent.putExtra("caller", 3);
                 activity.startActivity(i_intent);

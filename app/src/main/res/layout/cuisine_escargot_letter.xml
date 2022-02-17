@@ -611,33 +611,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+        <include layout="@layout/life_bar"/>
 
-            <ImageView
-                android:id="@+id/firstHeart"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/full_heart" />
-
-            <ImageView
-                android:id="@+id/secondHeart"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/full_heart" />
-
-            <ImageView
-                android:id="@+id/thirdHeart"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/full_heart" />
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
