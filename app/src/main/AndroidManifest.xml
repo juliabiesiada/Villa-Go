@@ -45,6 +45,8 @@
         <activity
             android:name=".MatchImagesAndWordsGame"
             android:exported="true" />
+        <activity android:name=".ForumActivity"
+            android:exported="true"/>
         <activity
             android:name=".EquipmentActivity"
             android:exported="true" />
