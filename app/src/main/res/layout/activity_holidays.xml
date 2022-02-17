@@ -63,6 +63,8 @@
                 android:paddingEnd="10dp"
                 android:tag="15/08"
                 android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:textSize="10sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -73,6 +75,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -84,6 +88,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -95,6 +101,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -116,6 +124,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -127,6 +137,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -138,6 +150,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -149,6 +163,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -169,6 +185,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:text=""
                 android:background="@drawable/bg_purple"
                 />
@@ -181,6 +199,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -192,6 +212,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -203,6 +225,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -224,6 +248,8 @@
                 android:textSize="10sp"
                 android:layout_height="80dp"
                 android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -235,6 +261,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -246,6 +274,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -257,6 +287,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -276,6 +308,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:text=""
                 android:background="@drawable/bg_purple"
                 />
@@ -288,6 +322,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -299,6 +335,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
@@ -310,6 +348,8 @@
                 android:layout_height="80dp"
                 android:text=""
                 android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
                 android:background="@drawable/bg_purple"
                 />
 
