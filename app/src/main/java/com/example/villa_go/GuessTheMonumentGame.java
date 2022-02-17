@@ -170,7 +170,7 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
         }
     }
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "worth_seeing", "4");
         dialogOnWin.show();
     }
 

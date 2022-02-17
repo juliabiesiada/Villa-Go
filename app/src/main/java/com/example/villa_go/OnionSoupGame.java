@@ -334,7 +334,7 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "cuisine", "2");
         dialogOnWin.show();
     }
 

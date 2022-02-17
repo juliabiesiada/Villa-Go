@@ -323,7 +323,7 @@ public class CuisineEscargotGame extends AppCompatActivity implements View.OnCli
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "cuisine", "6");
         dialogOnWin.show();
     }
 
