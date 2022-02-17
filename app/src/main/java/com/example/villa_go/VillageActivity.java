@@ -5,7 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class VillageActivity extends AppCompatActivity implements View.OnClickListener{
@@ -19,14 +27,11 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
     ImageButton lvlCheckIB7;
     ImageButton lvlCheckIB8;
     ImageButton lvlCheckIB9;
-    ImageButton lvlCheckIB10;
-    ImageButton lvlCheckIB11;
-    ImageButton lvlCheckIB12;
-    ImageButton lvlCheckIB13;
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
 
+    ArrayList<ImageButton> levelButtons = new ArrayList<>();
     Class[] levels = new Class[12];
 
     @Override
@@ -35,16 +40,15 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_village);
         setupUI();
 
-        //TODO: Setup levels array
-        levels[1] = SelectItemsPicnicActivity.class;
-        levels[2] = OnionSoupGame.class;
-        levels[3] = FindTheWordGame.class;
-        levels[4] = GuessTheMonumentGame.class;
-        levels[5] = CompleteTheSongGame.class;
-        levels[6] = CuisineEscargotGame.class;
-        levels[7] = ActivityQuizActivity.class;
+        levels[0] = SelectItemsPicnicActivity.class;
+        levels[1] = OnionSoupGame.class;
+        levels[2] = FindTheWordGame.class;
+        levels[3] = GuessTheMonumentGame.class;
+        levels[4] = CompleteTheSongGame.class;
+        levels[5] = CuisineEscargotGame.class;
+        levels[6] = ActivityQuizActivity.class;
+        levels[7] = MatchImagesAndWordsGame.class;
         levels[8] = HolidaysActivity.class;
-        levels[11] = MatchImagesAndWordsGame.class;
     }
 
     private void setupUI() {
@@ -57,10 +61,6 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB7 = findViewById(R.id.lvlCheckIB7);
         lvlCheckIB8 = findViewById(R.id.lvlCheckIB8);
         lvlCheckIB9 = findViewById(R.id.lvlCheckIB9);
-        lvlCheckIB10 = findViewById(R.id.lvlCheckIB10);
-        lvlCheckIB11 = findViewById(R.id.lvlCheckIB11);
-        lvlCheckIB12 = findViewById(R.id.lvlCheckIB12);
-        lvlCheckIB13 = findViewById(R.id.lvlCheckIB13);
 
         backBtn = findViewById(R.id.backImageButton);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
@@ -74,13 +74,21 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
         lvlCheckIB7.setOnClickListener(this);
         lvlCheckIB8.setOnClickListener(this);
         lvlCheckIB9.setOnClickListener(this);
-        lvlCheckIB10.setOnClickListener(this);
-        lvlCheckIB11.setOnClickListener(this);
-        lvlCheckIB12.setOnClickListener(this);
-        lvlCheckIB13.setOnClickListener(this);
+
+        levelButtons.add(lvlCheckIB1);
+        levelButtons.add(lvlCheckIB2);
+        levelButtons.add(lvlCheckIB3);
+        levelButtons.add(lvlCheckIB4);
+        levelButtons.add(lvlCheckIB5);
+        levelButtons.add(lvlCheckIB6);
+        levelButtons.add(lvlCheckIB7);
+        levelButtons.add(lvlCheckIB8);
+        levelButtons.add(lvlCheckIB9);
 
         backBtn.setOnClickListener(this);
         inventoryBtn.setOnClickListener(this);
+
+        completedLevels();
 
     }
 
@@ -110,5 +118,69 @@ public class VillageActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
 
+    }
+
+    private String readJSON() {
+        File f = new File("/data/data/" + getPackageName() + "/progress.json");
+        String json;
+
+        if (f.exists()) {
+            FileInputStream is = null;
+            try {
+                is = new FileInputStream(f);
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                json = new String(buffer);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        } else {
+            try {
+                InputStream is = getAssets().open("progress.json");
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                json = new String(buffer, "UTF-8");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                return null;
+            }
+        }
+        return json;
+
+    }
+
+    private void completedLevels() {
+        try {
+            JSONObject obj = new JSONObject(readJSON());
+            JSONObject levelsJSON = obj.getJSONObject("levels");
+
+            Iterator<String> keys = levelsJSON.keys();
+
+            while(keys.hasNext()) {
+                String key = keys.next();
+                if (levelsJSON.get(key) instanceof JSONObject) {
+                    JSONObject categoryJSON = (JSONObject) levelsJSON.get(key);
+                    Iterator<String> keys2 = categoryJSON.keys();
+
+                    while(keys2.hasNext()) {
+                        String key2 = keys2.next();
+                        if (categoryJSON.get(key2) instanceof JSONObject) {
+                            JSONObject level = (JSONObject) categoryJSON.get(key2);
+                            if (level.getBoolean("completed")) {
+                                int index = Integer.parseInt(key2.replace("level", "")) - 1;
+                                levelButtons.get(index).setBackgroundResource(R.drawable.bg_level_complete);
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

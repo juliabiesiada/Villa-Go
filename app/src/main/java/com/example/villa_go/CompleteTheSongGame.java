@@ -391,7 +391,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "culture", "5");
         dialogOnWin.show();
     }
 

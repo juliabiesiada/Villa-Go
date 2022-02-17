@@ -182,7 +182,7 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "language", "3");
         dialogOnWin.show();
     }
 

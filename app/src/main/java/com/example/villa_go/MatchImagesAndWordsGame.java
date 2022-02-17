@@ -144,7 +144,7 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "language", "8");
         dialogOnWin.show();
     }
 

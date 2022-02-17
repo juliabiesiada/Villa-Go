@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Villago">
         <activity
+            android:name=".InventoryDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityQuizActivity"
             android:exported="false" />
         <activity

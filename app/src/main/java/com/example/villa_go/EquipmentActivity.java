@@ -82,29 +82,31 @@ public class EquipmentActivity extends AppCompatActivity {
     }
 
     private void setupExpandableGroupListeners(ExpandableListView lv) {
-        lv.setOnGroupExpandListener(groupPosition -> Toast.makeText(getApplicationContext(),
-                expandableListTitle.get(groupPosition) + " List Expanded.",
-                Toast.LENGTH_SHORT).show());
 
-        lv.setOnGroupCollapseListener(groupPosition -> Toast.makeText(getApplicationContext(),
-                expandableListTitle.get(groupPosition) + " List Collapsed.",
-                Toast.LENGTH_SHORT).show());
+        lv.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
 
-        /*lv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        expandableListTitle.get(groupPosition)
-                                + " -> "
-                                + expandableListDetail.get(
-                                expandableListTitle.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT
-                ).show();
-                return false;
+            Intent intent = new Intent(this, InventoryDetailsActivity.class);
+            String childCategory;
+            switch (expandableListTitle.get(groupPosition)) {
+                case "CUISINE":
+                    childCategory = expandableListDetail.get(
+                            expandableListTitle.get(groupPosition)).get(
+                            childPosition);
+                    intent.putExtra("category", "Cuisine");
+                    intent.putExtra("subcategory", childCategory);
+                    startActivity(intent);
+                    break;
+                case "ACTIVITIES":
+                    childCategory = expandableListDetail.get(
+                            expandableListTitle.get(groupPosition)).get(
+                            childPosition);
+                    intent.putExtra("category", "Activities");
+                    intent.putExtra("subcategory", childCategory);
+                    startActivity(intent);
+                    break;
             }
-        });*/
+            return false;
+        });
     }
 
 }
