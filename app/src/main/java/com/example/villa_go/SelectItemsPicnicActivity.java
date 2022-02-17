@@ -80,6 +80,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_select_items_picnic);
 
         initializeUI();
+        setupMediaPlayer();
     }
 
     private void initializeUI() {
@@ -423,7 +424,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
             }
         }, 200);
 
-        story = MediaPlayer.create(this, R.raw.lamarseillaise);
+        story = MediaPlayer.create(this, R.raw.picnicfr);
         story.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
             @Override
@@ -436,7 +437,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
     }
 
     private void handleMediaPLayer() {
-        if (story.isPlaying()) {
+        if (story != null && story.isPlaying()) {
             story.pause();
             playIB.setImageResource(R.drawable.ic_play);
             pausedTime = story.getCurrentPosition();

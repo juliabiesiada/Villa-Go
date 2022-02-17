@@ -19,7 +19,6 @@ import java.util.HashMap;
 public class HolidaysActivity extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer instructions;
     MediaPlayer story;
-    int pausedTime;
 
     Button button00back;
     Button button01back;
@@ -47,11 +46,11 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
-    ImageButton playIB;
 
     int pairCounter = 0;
 
     HashMap<String, String> answers = new HashMap<>();
+    HashMap<String, Integer> sounds = new HashMap<>();
 
     ArrayList<Button> buttons = new ArrayList<>();
 
@@ -89,7 +88,6 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn = findViewById(R.id.backImageButton);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
-        playIB = findViewById(R.id.playImageButton);
 
         button00back.setOnClickListener(this);
         button01back.setOnClickListener(this);
@@ -114,7 +112,6 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn.setOnClickListener(this);
         inventoryBtn.setOnClickListener(this);
-        playIB.setOnClickListener(this);
     }
 
     private void setupHashMaps() {
@@ -149,6 +146,17 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
         buttons.add(button41back);
         buttons.add(button42back);
         buttons.add(button43back);
+
+        sounds.put("Assum-ption", R.raw.assumptionfrench);
+        sounds.put("Ascens-ion", R.raw.ascensionfrench);
+        sounds.put("Labour Day", R.raw.labordayfrench);
+        sounds.put("Christ-mas", R.raw.christmasfrench);
+        sounds.put("Armist-ice Day", R.raw.armisticefrench);
+        sounds.put("Victory Day", R.raw.victorydayfrench);
+        sounds.put("All Saints' Day", R.raw.allsaintsfrench);
+        sounds.put("Easter", R.raw.easterfrench);
+        sounds.put("New Year's Day", R.raw.newyearfrench);
+        sounds.put("Bastille Day", R.raw.bastillefrench);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -163,9 +171,6 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
                 Intent intent_i = new Intent(this, EquipmentActivity.class);
                 intent_i.putExtra("caller", 10);
                 startActivity(intent_i);
-                break;
-            case R.id.playImageButton:
-                handleMediaPLayer();
                 break;
             default:
                 handleMemoButton((Button) view);
@@ -206,6 +211,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void flipCard(Button card) {
+        playStory(card);
         card.setText(card.getTag().toString());
         card.setBackgroundResource(R.drawable.bg_secondary_green2);
         card.setClickable(false);
@@ -261,31 +267,20 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
                 instructions.start();
             }
         }, 200);
-
-        story = MediaPlayer.create(this, R.raw.lamarseillaise);
-        story.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                pausedTime = 0;
-                playIB.setImageResource(R.drawable.ic_play);
-            }
-
-        });
     }
 
-    private void handleMediaPLayer() {
-        if (story.isPlaying()) {
-            story.pause();
-            playIB.setImageResource(R.drawable.ic_play);
-            pausedTime = story.getCurrentPosition();
-        } else if (pausedTime != 0){
-            playIB.setImageResource(R.drawable.ic_pause);
-            story.seekTo(pausedTime);
-            story.start();
-        } else {
-            playIB.setImageResource(R.drawable.ic_pause);
-            story.start();
+    private void playStory(Button card) {
+        if (story != null &&story.isPlaying()) story.stop();
+        if (sounds.get(card.getTag().toString()) != null) {
+            int id = sounds.get(card.getTag().toString());
+            story = MediaPlayer.create(this, id);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    story.start();
+                }
+            }, 100);
         }
     }
 }
