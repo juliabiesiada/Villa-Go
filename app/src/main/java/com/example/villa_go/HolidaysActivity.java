@@ -223,7 +223,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "culture", "8");
         dialogOnWin.show();
     }
 }

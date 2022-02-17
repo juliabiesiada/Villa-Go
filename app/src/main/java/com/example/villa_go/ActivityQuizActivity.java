@@ -206,7 +206,7 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "activities", "6");
         dialogOnWin.show();
     }
 

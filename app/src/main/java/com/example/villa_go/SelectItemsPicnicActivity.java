@@ -371,7 +371,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
     }
 
     private void showWinDialog() {
-        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        DialogOnWin dialogOnWin = new DialogOnWin(this, "activities", "1");
         dialogOnWin.show();
     }
 }

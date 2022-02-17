@@ -1,0 +1,54 @@
+{
+  "levels": {
+    "cuisine": {
+      "level2": {
+        "name": "OnionSoupGame",
+        "title": "Onion Soup",
+        "category": ["All dishes", "Dinner"],
+        "completed": false
+      },
+      "level6": {
+        "name": "CuisineEscargotGame",
+        "title": "Escargot",
+        "category": ["All dishes"],
+        "completed": false
+      }
+    },
+    "activities": {
+      "level7": {
+        "title": "custom",
+        "category": ["Custom"],
+        "name": "ActivityQuizActivity",
+        "completed": false
+      },
+      "level1": {
+        "title": "Pic-nique",
+        "category": ["All activities", "Outdoors", "Spring", "Summer"],
+        "name": "SelectItemsPicnic",
+        "completed": false
+      }
+    },
+    "culture": {
+      "level5": {
+        "name": "CompleteTheSongGame",
+        "completed": false
+      }
+    },
+    "language": {
+      "level3": {
+        "name": "FindTheWordGame",
+        "completed": false
+      },
+      "level8": {
+        "name": "MatchImagesAndWordsGame",
+        "completed": false
+      }
+    },
+    "worth_seeing": {
+      "level3": {
+        "name": "GuessTheMonumentGame",
+        "completed": false
+      }
+    }
+  }
+}

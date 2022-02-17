@@ -31,7 +31,7 @@ public class DialogOnLoose extends Dialog implements View.OnClickListener {
 
     private void setupUI() {
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        replayButton = findViewById(R.id.btnInventory);
+        replayButton = findViewById(R.id.btnReplay);
         villageButton = findViewById(R.id.btnVillage);
         replayButton.setOnClickListener(this);
         villageButton.setOnClickListener(this);
