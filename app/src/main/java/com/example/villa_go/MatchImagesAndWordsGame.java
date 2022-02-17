@@ -3,7 +3,9 @@ package com.example.villa_go;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MatchImagesAndWordsGame extends AppCompatActivity implements View.OnClickListener {
+    MediaPlayer instructions;
+
     // Buttons
     Button word1, word2, word3, word4;
     ImageButton image1, image2, image3, image4;
@@ -63,6 +67,15 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
         firstHeart = findViewById(R.id.firstHeart);
         secondHeart = findViewById(R.id.secondHeart);
         thirdHeart = findViewById(R.id.thirdHeart);
+
+        instructions = MediaPlayer.create(this, R.raw.matchfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     private void actualiseLives() {
@@ -73,6 +86,13 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
             secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
         } else if(lives==0) {
             thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    loose();
+                }
+            }, 500);
         }
     }
 
@@ -93,8 +113,13 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
                 selected.setVisibility(View.INVISIBLE);
                 found++;
                 if(found == ims.length) {
-                    intent = new Intent(this, VillageActivity.class);
-                    startActivity(intent);
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showWinDialog();
+                        }
+                    }, 500);
                 }
             } else {
                 actualiseLives();
@@ -116,5 +141,22 @@ public class MatchImagesAndWordsGame extends AppCompatActivity implements View.O
                 }
             }
         }
+    }
+
+    private void showWinDialog() {
+        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        instructions.stop();
+        instructions.release();
     }
 }

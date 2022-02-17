@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_activity_quiz.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_equipment.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_holidays.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/activity_select_items_picnic.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/complete_the_song_game.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/cuisine_escargot_letter.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/dialog_correct_answer.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/find_the_word_activity.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/guess_the_monument_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/match_images_and_words_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/FloPi/AndroidStudioProjects/Villago/app/src/main/res/layout/onion_soup_game.xml" value="0.13360507246376813" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

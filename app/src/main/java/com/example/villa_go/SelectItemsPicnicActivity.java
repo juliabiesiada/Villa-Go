@@ -2,7 +2,9 @@ package com.example.villa_go;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SelectItemsPicnicActivity extends AppCompatActivity implements View.OnClickListener {
+    MediaPlayer instructions;
 
     ImageView placeholder1;
     ImageView placeholder2;
@@ -191,6 +194,15 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
 
         setupLists();
         tieObjectToLabel();
+
+        instructions = MediaPlayer.create(this, R.raw.picnicfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     private void tieObjectToLabel() {
@@ -246,7 +258,21 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
                 break;
             case R.id.confirmButton:
                 if (isCorrect()) {
-                    showWinDialog();
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showWinDialog();
+                        }
+                    }, 500);
+                } else {
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            loose();
+                        }
+                    }, 500);
                 }
                 break;
             case R.id.backImageButton:
@@ -373,5 +399,17 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
     private void showWinDialog() {
         DialogOnWin dialogOnWin = new DialogOnWin(this);
         dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        instructions.stop();
+        instructions.release();
     }
 }

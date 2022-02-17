@@ -30,7 +30,7 @@
         android:padding="10dp"
         android:text=""
         android:backgroundTint="@color/orange"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:background="@drawable/bg_purple"
         android:id="@+id/textView_question"
         android:layout_width="350dp"

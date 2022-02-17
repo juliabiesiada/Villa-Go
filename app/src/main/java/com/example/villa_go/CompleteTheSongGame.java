@@ -18,6 +18,7 @@ import androidx.cardview.widget.CardView;
 
 public class CompleteTheSongGame extends AppCompatActivity implements View.OnClickListener{
     MediaPlayer mediaPlayer;
+    MediaPlayer instructions;
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
@@ -99,6 +100,15 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
             }
 
         });
+
+        instructions = MediaPlayer.create(this, R.raw.songfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
@@ -325,9 +335,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent intent_c = new Intent(getApplicationContext(), VillageActivity.class);
-                            startActivity(intent_c);
-                            supportFinishAfterTransition();
+                            showWinDialog();
                         }
                     }, 500);
                 } else {
@@ -335,9 +343,7 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent intent_c = new Intent(getApplicationContext(), CompleteTheSongGame.class);
-                            startActivity(intent_c);
-                            supportFinishAfterTransition();
+                            loose();
                         }
                     }, 500);
                 }
@@ -359,6 +365,9 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
     }
 
     private void playMusic() {
+        if(instructions.isPlaying()) {
+            instructions.pause();
+        }
         playIcon.setBackground(getResources().getDrawable(R.drawable.ic_pause));
         mediaPlayer.start();
     }
@@ -377,6 +386,19 @@ public class CompleteTheSongGame extends AppCompatActivity implements View.OnCli
         super.onPause();
         mediaPlayer.stop();
         mediaPlayer.release();
+        instructions.stop();
+        instructions.release();
     }
+
+    private void showWinDialog() {
+        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
+    }
+
 }
 

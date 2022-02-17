@@ -3,6 +3,7 @@ package com.example.villa_go;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -99,6 +100,13 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
             secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
         } else if(lives==0) {
             thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    loose();
+                }
+            }, 500);
         }
     }
 
@@ -127,8 +135,13 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
                         wordCheck += ls[i].getText().toString();
                     }
                     if(wordCheck.equals(word)) {
-                        intent = new Intent(this, VillageActivity.class);
-                        startActivity(intent);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                showWinDialog();
+                            }
+                        }, 500);
                     } else {
                         actualiseLives();
                         for(int i=0; i < ls.length; i++) {
@@ -155,6 +168,15 @@ public class GuessTheMonumentGame extends AppCompatActivity implements View.OnCl
                 }
             }
         }
+    }
+    private void showWinDialog() {
+        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
     }
 }
 

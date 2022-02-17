@@ -31,7 +31,7 @@ public class DialogOnLoose extends Dialog implements View.OnClickListener {
 
     private void setupUI() {
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        replayButton = findViewById(R.id.btnInventory);
+        replayButton = findViewById(R.id.btnReplay);
         villageButton = findViewById(R.id.btnVillage);
         replayButton.setOnClickListener(this);
         villageButton.setOnClickListener(this);
@@ -42,15 +42,18 @@ public class DialogOnLoose extends Dialog implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnReplay:
-                Intent i_intent = new Intent(activity.getApplicationContext(), EquipmentActivity.class);
+                Intent i_intent = new Intent(activity.getApplicationContext(), activity.getClass());
                 i_intent.putExtra("caller", 3);
                 activity.startActivity(i_intent);
+                activity.finish();
                 break;
             case R.id.btnVillage:
                 Intent v_intent = new Intent(activity.getApplicationContext(), VillageActivity.class);
                 activity.startActivity(v_intent);
+                activity.finish();
                 break;
         }
         dismiss();
     }
+
 }
