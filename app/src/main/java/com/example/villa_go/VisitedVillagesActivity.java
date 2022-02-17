@@ -44,7 +44,7 @@ public class VisitedVillagesActivity extends AppCompatActivity implements View.O
                 startActivity(intent);
                 break;
             case R.id.backImageButton:
-                Intent intent_b = new Intent(this, VisitedVillagesActivity.class);
+                Intent intent_b = new Intent(this, MainActivity.class);
                 startActivity(intent_b);
                 break;
             case R.id.inventoryImageButton:

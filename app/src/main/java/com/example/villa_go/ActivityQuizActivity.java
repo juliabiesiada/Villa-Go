@@ -174,7 +174,13 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
                     if (answersQuestions.size() > 0) {
                         setupQuestion();
                     } else {
-                        showWinDialog();
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                showWinDialog();
+                            }
+                        }, 500);
                     }
                 } else {
                     showAnswerDialog(false);
@@ -222,7 +228,13 @@ public class ActivityQuizActivity extends AppCompatActivity implements View.OnCl
                 break;
             case 1:
                 heart1.setBackgroundResource(R.drawable.empty_heart);
-                loose();
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loose();
+                    }
+                }, 500);
         }
     }
 

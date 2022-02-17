@@ -6,6 +6,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HolidaysActivity extends AppCompatActivity implements View.OnClickListener {
+    MediaPlayer instructions;
 
     Button button00back;
     Button button01back;
@@ -107,6 +109,15 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn.setOnClickListener(this);
         inventoryBtn.setOnClickListener(this);
+
+        instructions = MediaPlayer.create(this, R.raw.holidayfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     private void setupHashMaps() {
@@ -175,7 +186,13 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
                 pairCounter++;
                 setBtnClickable(true);
                 if (pairCounter == 10) {
-                    showWinDialog();
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showWinDialog();
+                        }
+                    }, 500);
                 }
             } else {
                 Handler handler = new Handler();
@@ -225,5 +242,12 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
     private void showWinDialog() {
         DialogOnWin dialogOnWin = new DialogOnWin(this, "culture", "8");
         dialogOnWin.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        instructions.stop();
+        instructions.release();
     }
 }

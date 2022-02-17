@@ -2,7 +2,9 @@ package com.example.villa_go;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class FindTheWordGame extends AppCompatActivity implements View.OnClickListener {
+    MediaPlayer instructions;
     // Letters
     Button l1, l2, l3, l4, l5, l6, l7, al1, al2, al3, al4, al5, al6, al7, al8, al9, al10, al11, al12, al13, al14, al15, al16;
     Button[] ls = {l1, l2, l3, l4, l5, l6, l7};
@@ -81,6 +84,15 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
         firstHeart = findViewById(R.id.firstHeart);
         secondHeart = findViewById(R.id.secondHeart);
         thirdHeart = findViewById(R.id.thirdHeart);
+
+        instructions = MediaPlayer.create(this, R.raw.travelfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     private char[] arrayListToChar(ArrayList<Character> al) {
@@ -99,6 +111,13 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
             secondHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
         } else if(lives==0) {
             thirdHeart.setBackground(getResources().getDrawable(R.drawable.empty_heart));
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    loose();
+                }
+            }, 500);
         }
     }
 
@@ -127,8 +146,13 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
                         wordCheck += ls[i].getText().toString();
                     }
                     if(wordCheck.equals(word)) {
-                        intent = new Intent(this, VillageActivity.class);
-                        startActivity(intent);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                showWinDialog();
+                            }
+                        }, 500);
                     } else {
                         actualiseLives();
                         for(int i=0; i < ls.length; i++) {
@@ -155,5 +179,22 @@ public class FindTheWordGame extends AppCompatActivity implements View.OnClickLi
                 }
             }
         }
+    }
+
+    private void showWinDialog() {
+        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        instructions.stop();
+        instructions.release();
     }
 }

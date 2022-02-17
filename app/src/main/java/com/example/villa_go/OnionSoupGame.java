@@ -2,6 +2,7 @@ package com.example.villa_go;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.DragEvent;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class OnionSoupGame extends AppCompatActivity implements View.OnClickListener{
+    MediaPlayer instructions;
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
@@ -104,6 +106,15 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
         backBtn.setOnClickListener(this);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
         inventoryBtn.setOnClickListener(this);
+
+        instructions = MediaPlayer.create(this, R.raw.onionfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
     }
 
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
@@ -275,9 +286,7 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(getApplicationContext(), VillageActivity.class);
-                    startActivity(intent);
-                    supportFinishAfterTransition();
+                    showWinDialog();
                 }
             }, 500);
         }
@@ -302,9 +311,7 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(getApplicationContext(), OnionSoupGame.class);
-                    startActivity(intent);
-                    supportFinishAfterTransition();
+                    loose();
                 }
             }, 500);
         }
@@ -324,5 +331,22 @@ public class OnionSoupGame extends AppCompatActivity implements View.OnClickList
                 startActivity(intent_i);
                 break;
         }
+    }
+
+    private void showWinDialog() {
+        DialogOnWin dialogOnWin = new DialogOnWin(this);
+        dialogOnWin.show();
+    }
+
+    private void loose() {
+        DialogOnLoose dialogOnLoose = new DialogOnLoose(this);
+        dialogOnLoose.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        instructions.stop();
+        instructions.release();
     }
 }

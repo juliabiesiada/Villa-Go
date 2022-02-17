@@ -61,6 +61,7 @@ public class DialogOnWin extends Dialog implements View.OnClickListener {
                 Intent i_intent = new Intent(activity.getApplicationContext(), EquipmentActivity.class);
                 i_intent.putExtra("caller", 3);
                 activity.startActivity(i_intent);
+                activity.finish();
                 break;
             case R.id.btnVillage:
                 Intent v_intent = new Intent(activity.getApplicationContext(), VillageActivity.class);

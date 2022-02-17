@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button continueButton;
     CardView inventoryCardView;
+    CardView forumCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         setupUI();
     }
 
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         inventoryCardView.setOnClickListener(this);
         continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener(this);
-
+        forumCardView = findViewById(R.id.forumCardView);
+        forumCardView.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -46,7 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, VisitedVillagesActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.forumCardView:
+                intent = new Intent(this, ForumActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }
