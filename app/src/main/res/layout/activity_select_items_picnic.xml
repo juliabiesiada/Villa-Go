@@ -14,12 +14,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/ballerina"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ballerina"/>
+
+            <ImageButton
+                android:id="@+id/playImageButton"
+                android:layout_marginTop="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_play"
+                android:background="@drawable/bg_level"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
         <FrameLayout
             android:layout_height="100dp"
             android:layout_width="250dp"

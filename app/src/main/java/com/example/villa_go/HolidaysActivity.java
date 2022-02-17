@@ -18,6 +18,8 @@ import java.util.HashMap;
 
 public class HolidaysActivity extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer instructions;
+    MediaPlayer story;
+    int pausedTime;
 
     Button button00back;
     Button button01back;
@@ -45,6 +47,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
     ImageButton backBtn;
     ImageButton inventoryBtn;
+    ImageButton playIB;
 
     int pairCounter = 0;
 
@@ -59,6 +62,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         setupUI();
         setupHashMaps();
+        setupMediaPlayer();
     }
 
     private void setupUI() {
@@ -85,6 +89,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn = findViewById(R.id.backImageButton);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
+        playIB = findViewById(R.id.playImageButton);
 
         button00back.setOnClickListener(this);
         button01back.setOnClickListener(this);
@@ -109,15 +114,7 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn.setOnClickListener(this);
         inventoryBtn.setOnClickListener(this);
-
-        instructions = MediaPlayer.create(this, R.raw.holidayfrench);
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                instructions.start();
-            }
-        }, 200);
+        playIB.setOnClickListener(this);
     }
 
     private void setupHashMaps() {
@@ -167,6 +164,9 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
                 intent_i.putExtra("caller", 10);
                 startActivity(intent_i);
                 break;
+            case R.id.playImageButton:
+                handleMediaPLayer();
+                break;
             default:
                 handleMemoButton((Button) view);
                 break;
@@ -174,13 +174,13 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void handleMemoButton(Button view) {
-        flipCard((Button) view);
+        flipCard(view);
         if (selected1 == null) {
-            selected1 = (Button) view;
+            selected1 = view;
         } else {
             setBtnClickable(false);
-            selected2 = (Button) view;
-            if(checkIfCorrect((Button) view)) {
+            selected2 = view;
+            if(checkIfCorrect(view)) {
                 selected1 = null;
                 selected2 = null;
                 pairCounter++;
@@ -249,5 +249,43 @@ public class HolidaysActivity extends AppCompatActivity implements View.OnClickL
         super.onPause();
         instructions.stop();
         instructions.release();
+    }
+
+    private void setupMediaPlayer() {
+
+        instructions = MediaPlayer.create(this, R.raw.holidayfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
+
+        story = MediaPlayer.create(this, R.raw.lamarseillaise);
+        story.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                pausedTime = 0;
+                playIB.setImageResource(R.drawable.ic_play);
+            }
+
+        });
+    }
+
+    private void handleMediaPLayer() {
+        if (story.isPlaying()) {
+            story.pause();
+            playIB.setImageResource(R.drawable.ic_play);
+            pausedTime = story.getCurrentPosition();
+        } else if (pausedTime != 0){
+            playIB.setImageResource(R.drawable.ic_pause);
+            story.seekTo(pausedTime);
+            story.start();
+        } else {
+            playIB.setImageResource(R.drawable.ic_pause);
+            story.start();
+        }
     }
 }

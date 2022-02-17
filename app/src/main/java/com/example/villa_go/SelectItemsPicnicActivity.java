@@ -18,6 +18,8 @@ import java.util.HashMap;
 
 public class SelectItemsPicnicActivity extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer instructions;
+    MediaPlayer story;
+    int pausedTime;
 
     ImageView placeholder1;
     ImageView placeholder2;
@@ -63,6 +65,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
     Button confirmBtn;
     ImageButton backBtn;
     ImageButton inventoryBtn;
+    ImageButton playIB;
 
     ArrayList<ImageView> placeholders;
     ArrayList<TextView> placeholderLabels;
@@ -172,6 +175,7 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
         restartBtn = findViewById(R.id.restartButton);
         backBtn = findViewById(R.id.backImageButton);
         inventoryBtn = findViewById(R.id.inventoryImageButton);
+        playIB = findViewById(R.id.playImageButton);
 
         object1.setOnClickListener(this);
         object2.setOnClickListener(this);
@@ -191,18 +195,10 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
 
         backBtn.setOnClickListener(this);
         inventoryBtn.setOnClickListener(this);
+        playIB.setOnClickListener(this);
 
         setupLists();
         tieObjectToLabel();
-
-        instructions = MediaPlayer.create(this, R.raw.picnicfrench);
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                instructions.start();
-            }
-        }, 200);
     }
 
     private void tieObjectToLabel() {
@@ -255,6 +251,9 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
                 setupLists();
                 restoreVisibility();
                 clearBasket();
+                break;
+            case R.id.playImageButton:
+                handleMediaPLayer();
                 break;
             case R.id.confirmButton:
                 if (isCorrect()) {
@@ -411,5 +410,43 @@ public class SelectItemsPicnicActivity extends AppCompatActivity implements View
         super.onPause();
         instructions.stop();
         instructions.release();
+    }
+
+    private void setupMediaPlayer() {
+
+        instructions = MediaPlayer.create(this, R.raw.picnicfrench);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                instructions.start();
+            }
+        }, 200);
+
+        story = MediaPlayer.create(this, R.raw.lamarseillaise);
+        story.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                pausedTime = 0;
+                playIB.setImageResource(R.drawable.ic_play);
+            }
+
+        });
+    }
+
+    private void handleMediaPLayer() {
+        if (story.isPlaying()) {
+            story.pause();
+            playIB.setImageResource(R.drawable.ic_play);
+            pausedTime = story.getCurrentPosition();
+        } else if (pausedTime != 0){
+            playIB.setImageResource(R.drawable.ic_pause);
+            story.seekTo(pausedTime);
+            story.start();
+        } else {
+            playIB.setImageResource(R.drawable.ic_pause);
+            story.start();
+        }
     }
 }
